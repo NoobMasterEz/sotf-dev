@@ -1,6 +1,6 @@
-# sotf-dev :laughing:
+# sotf-dev :books:
 ENGCE112 การออกแบบและพัฒนาซอฟต์แวร์ 
 Rajamangala University of Technology Lanna
 
 # Team
--Ratchanonth plumanut
+:gem:Ratchanonth plumanut
