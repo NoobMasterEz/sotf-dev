@@ -17,10 +17,13 @@ public class test{
         {
             System.out.println(fruits[i]);
         }
+        /**
+         
+         
         for (String t : fruits) {
             System.out.println(t);
         }
-        
+        */
     }
     
 }
