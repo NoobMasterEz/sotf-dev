@@ -1,0 +1,3 @@
+
+#complie to fourder
+javac filename -r dir
