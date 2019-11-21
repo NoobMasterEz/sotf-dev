@@ -6,20 +6,20 @@ Rajamangala University of Technology Lanna
   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQtCuASIGFzdfBs9wwyFb6XUWIA9vGpldgEIUxywtviyriM_THzw&s" width="200" alt="accessibility text">
 </p>
 
-# Install JAVA
+# :electric_plug:	 Install JAVA
 Downloading and installing Java is easy and free. There are a couple ways by which you can get Java for Windows or linux 
 - Windows Download and Installation
   - downdload from https://java.com/en/download/help/windows_manual_download.xml
 - Linux Download and Installation
   - downdload from https://java.com/en/download/help/linux_install.xml
 
-# MyTeam
+# :robot:	MyTeam
 
 |   No.| Name               |
 |------|--------------------|
 |:gem: |Ratchanonth plumanut|
 
-# HelpFrom
+# :question:	HelpFrom
 <p align="center">
   <img src="https://i.stack.imgur.com/h9beB.png" width="350" title="hover text">
 </p>
