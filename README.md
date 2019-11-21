@@ -1,4 +1,4 @@
-# sotf-dev ![tekst alternatywny](ścieżka/do/pliku)
+# sotf-dev :laughing:
 ENGCE112 การออกแบบและพัฒนาซอฟต์แวร์ 
 Rajamangala University of Technology Lanna
 
