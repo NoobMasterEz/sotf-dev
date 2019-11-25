@@ -6,12 +6,26 @@ __Rajamangala University of Technology Lanna__
   
 </p>
 
+# Course Description
+  ศึกษาและฝึกปฏิบัติการเกี่ยวกับ แบบจำลองข้อมูล และระบบฐานข้อมูล การเลือกใช้เครื่องมือในการพัฒนาซอฟต์แวร์ มาตรฐานของซอฟต์แวร์ และการจัดการข้อจำกัดเชิงวิศวกรรม กระบวนทัศน์การเขียนโปรแกรมและเทคนิคการเลือกคำสั่งในการแก้ไขปัญหาในเชิงโปรแกรมรูปแบบการเขียนโปรแกรมเชิงโครงสร้าง แบบจำลองการไม่ประสานกันสำหรับการเขียนโปรแกรมที่มีการประมวลผลร่วมกัน การออกแบบและเขียนโปรแกรมเชิงวัตถุ กระบวนการผลิตซอฟต์แวร์ กระบวนการทดสอบและคุณภาพของซอฟต์แวร์ การสร้างหน่วยทดสอบ รวมถึงการประยุกต์ใช้งานสำหรับอินเตอร์เน็ตในทุกสรรพสิ่ง
+
 # :electric_plug:	 Install JAVA
 Downloading and installing Java is easy and free. There are a couple ways by which you can get Java for Windows or linux 
 - Windows Download and Installation
   - downdload from https://java.com/en/download/help/windows_manual_download.xml
 - Linux Download and Installation
   - downdload from https://java.com/en/download/help/linux_install.xml
+  
+# Topics
+- OOP Basics, Git, GitHub :heavy_check_mark:
+- Java Basics, UML Class Diagram, Encapsulation
+- Composition, Inheritance
+- Polymorphism
+- Abstract & Interface
+- GUI
+- Scrum, Product Management
+- System Modeling, Unit Testing
+- Design Patterns, Code Craftsmanship
 
 # :robot:	MyTeam
 
