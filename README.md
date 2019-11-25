@@ -1,6 +1,6 @@
 # Software Design and Development :books: [![Build Status](https://travis-ci.org/{ORG-or-USERNAME}/{REPO-NAME}.png?branch=master)](https://travis-ci.org/{ORG-or-USERNAME}/{REPO-NAME})
-ENGCE112 การออกแบบและพัฒนาซอฟต์แวร์ 
-Rajamangala University of Technology Lanna
+__ENGCE112__ การออกแบบและพัฒนาซอฟต์แวร์ 
+__Rajamangala University of Technology Lanna__
 <p align="center">
   <img src="https://cdn.vox-cdn.com/thumbor/FDD76YJZJFPyNUfT3ZBHcnMA0Ec=/43x0:593x367/1200x800/filters:focal(43x0:593x367)/cdn.vox-cdn.com/uploads/chorus_image/image/48667835/dbgxt2rvpd26udoyzcqn.0.0.jpg" width="200" title="hover text">
   
