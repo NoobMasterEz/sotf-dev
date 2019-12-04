@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - blankaccout",
+            "request": "launch",
+            "mainClass": "blankaccout",
+            "projectName": "soft-dev_11ff1c0d"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - testCircle",
             "request": "launch",
             "mainClass": "testCircle",
