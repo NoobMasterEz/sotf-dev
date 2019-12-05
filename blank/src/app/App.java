@@ -45,7 +45,7 @@ public class App {
         {
             clearScreen();
             for (int i = 0; i < myArrList.size(); i++) {
-                outp.customerName(i);
+                outp.showBalance(i);
                }
                System.out.println("\tMenu");
                System.out.println("(1).Deposit");

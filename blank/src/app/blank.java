@@ -11,15 +11,16 @@ import java.util.Hashtable;;
 
 public class blank {
 
-    ArrayList<Hashtable<String, String>> Arryclass = new ArrayList<Hashtable<String, String>>();
-    ArrayList<Double> al = new ArrayList<Double>();
-    ArrayList<Double> ah = new ArrayList<Double>();
+    private ArrayList<Hashtable<String, String>> Arryclass = new ArrayList<Hashtable<String, String>>();
+    private ArrayList<Double> al = new ArrayList<Double>();
+    private ArrayList<Double> ah = new ArrayList<Double>();
 
     blank(final ArrayList<Hashtable<String, String>> myArrayList) {
         this.Arryclass = myArrayList;
+        addInterest(myArrayList);
     }
 
-    public void customerName(final int index) {
+    public void showBalance(final int index) {
         /**
          * show disk play
          */
@@ -28,6 +29,7 @@ public class blank {
         System.out.println("[Balance]: " + Arryclass.get(index).get("balance").toString());
         System.out.println("[transactions]: " + Arryclass.get(index).get("transactions").toString());
         System.out.println("---------------------------------");
+
     }
 
     public void deposit(final int index, final int money) {
@@ -83,6 +85,18 @@ public class blank {
         System.in.read();
     }
     
+    public void addInterest( ArrayList<Hashtable<String, String>> new_Arryclass){
+        /**
+         * calcuat balanace + interest = per/year
+         */
+        for (int i = 0; i < new_Arryclass.size(); i++) {
+            String balance=new_Arryclass.get(i).get("balance").toString();
+            double br=(Double.parseDouble(balance));
+            double new_balance=(br*0.07);
+            this.Arryclass.get(i).put("balance", String.valueOf(br+new_balance));
+            
+        }
+    }
 
     public void Longest(final int index) throws IOException {
         /**
