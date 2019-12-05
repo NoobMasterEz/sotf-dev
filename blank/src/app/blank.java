@@ -1,9 +1,9 @@
 package app;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Hashtable;
-
+import java.util.Hashtable;;
 
 /**
  * blank
@@ -14,11 +14,15 @@ public class blank {
     ArrayList<Hashtable<String, String>> Arryclass = new ArrayList<Hashtable<String, String>>();
     ArrayList<Double> al = new ArrayList<Double>();
     ArrayList<Double> ah = new ArrayList<Double>();
+
     blank(final ArrayList<Hashtable<String, String>> myArrayList) {
         this.Arryclass = myArrayList;
     }
 
     public void customerName(final int index) {
+        /**
+         * show disk play
+         */
         System.out.println("[ID]: " + Arryclass.get(index).get("id").toString());
         System.out.println("[User]: " + Arryclass.get(index).get("name").toString());
         System.out.println("[Balance]: " + Arryclass.get(index).get("balance").toString());
@@ -26,61 +30,127 @@ public class blank {
         System.out.println("---------------------------------");
     }
 
-    public void deposit(final int index,final int money) {
-        int result =Integer.parseInt( this.Arryclass.get(index-1).get("balance"));
-        final String tran=this.Arryclass.get(index-1).get("transactions");
-        result=result+money;
-        this.Arryclass.get(index-1).put("balance",Integer.toString( result));
-        this.Arryclass.get(index-1).put("transactions",tran+"D");
-        //System.out.println("transactions:"+this.Arryclass.get(index).get("transactions").toString());
+    public void deposit(final int index, final int money) {
+        /**
+         * deposit
+         */
+        try {
+            int result = Integer.parseInt(this.Arryclass.get(index - 1).get("balance"));
+            final String tran = this.Arryclass.get(index - 1).get("transactions");
+            result = result + money;
+            this.Arryclass.get(index - 1).put("balance", Integer.toString(result));
+            this.Arryclass.get(index - 1).put("transactions", tran + "D");
+
+        } catch (final IndexOutOfBoundsException e) {
+            // TODO: handle exception
+            System.out.println("Someting wrong index out of rang. ");
+        }
+        // System.out.println("transactions:"+this.Arryclass.get(index).get("transactions").toString());
     }
+
     public void withdraw(final int index, final int money) {
         /*
-            withdraw from acc ;
-            check resutl < 0 
-                them pass
-            else 
-                them put data in data dict 
-        */
-        int result =Integer.parseInt( this.Arryclass.get(index-1).get("balance"));
-        final String tran=this.Arryclass.get(index-1).get("transactions");
-        result=result-money;
-        if (result <= 0) {
-            System.out.println("Not enough money in the account ");
-        }
-        else{
-            this.Arryclass.get(index-1).put("balance",Integer.toString( result));
-            this.Arryclass.get(index-1).put("transactions",tran+"W");
-        }
-        
-    }
-
-    public void sort() {
-        for (final Hashtable<String,String> hashtable : this.Arryclass) {
-            this.al.add(Double.parseDouble(hashtable.get("balance"))); 
-        }
-        Collections.sort(al); 
-        System.out.println("The person with highest account balance is:$"+String.valueOf(al.get(al.size()-1)));
-        System.out.println("The person with lowest account balance is:$"+String.valueOf(al.get(al.size()-al.size())));
-    }
-
-    public void Longest(final int index) {
-        /**
-         *  ah
+         * withdraw from acc ; check resutl < 0 them pass else them put data in data
+         * dict
          */
-        int d=0;
-        int w=0;
-        final String str=this.Arryclass.get(index).get("transactions");
-        char New_str[]=str.toCharArray();
-        for (char c : New_str) {
-            if (c == 'D') {
-                d++;
+        try {
+            int result = Integer.parseInt(this.Arryclass.get(index - 1).get("balance"));
+            final String tran = this.Arryclass.get(index - 1).get("transactions");
+            result = result - money;
+            if (result <= 0) {
+                System.out.println("Not enough money in the account ");
             } else {
-                w++;
+                this.Arryclass.get(index - 1).put("balance", Integer.toString(result));
+                this.Arryclass.get(index - 1).put("transactions", tran + "W");
             }
-        
+
+        } catch (final IndexOutOfBoundsException e) {
+            System.out.println(e);
+
         }
-        System.out.println(d);
+    }
+
+    public void sort() throws IOException {
+        /**
+         * sorted hashtable value balance. that from Array list
+         */
+        for (final Hashtable<String, String> hashtable : this.Arryclass) {
+            this.al.add(Double.parseDouble(hashtable.get("balance")));
+        }
+        Collections.sort(al);
+        System.out.println("The person with highest account balance is:$" + String.valueOf(al.get(al.size() - 1)));
+        System.out.println("The person with lowest account balance is:$" + String.valueOf(al.get(al.size() - al.size())));
+        System.in.read();
+    }
+    
+
+    public void Longest(final int index) throws IOException {
+        /**
+         * ah Someting else . i'm not think for algo
+         */
+        int d = 0;
+        int w = 0;
+        int tmp_d = 0;
+        int tmp_w = 0;
+
+        final String str = this.Arryclass.get(index).get("transactions");
+        final char New_str[] = str.toCharArray();
+
+        for (int i = 0; i < New_str.length; i++) {
+            if (i < New_str.length-1 ) {
+                if (New_str[i] == New_str[i + 1]) {
+                    if (New_str[i] == 'D') {
+                        d++;
+                    } else {
+                        w++;
+                    }
+                }else{
+                    if(New_str[i] == 'D'){
+                        if(tmp_d<d){
+                            tmp_d = d;
+                            //System.out.println(tmp_d);
+                            d=0;
+                        }
+                    }
+                    if(New_str[i] == 'W'){
+                        if(tmp_w<w){
+                            tmp_w = w;
+                            //System.out.println(tmp_w);
+                            w=0;
+                        }
+                    }
+
+                }
+            }else{
+                if(New_str[i] == 'D'){
+                    if(tmp_d<d){
+                        tmp_d = d;
+                        //System.out.println(tmp_d);
+                        d=0;
+                    }
+                }
+                if(New_str[i] == 'W'){
+                    if(tmp_w<w){
+                        tmp_w = w;
+                        //System.out.println(tmp_w);
+                        w=0;
+                    }
+                }
+            }
+         
+        }
+        if(tmp_d <tmp_w){
+            System.out.print("Longest repeating activity:Withdraw");
+            System.out.println(tmp_w+1);
+            System.in.read();
+        }else{
+            System.out.print("Longest repeating activity:Deposit ");
+            System.out.println(tmp_d+1);
+            System.in.read();
+        }
+
+
+        
     }
 
 }
